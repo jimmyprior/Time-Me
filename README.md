@@ -1,4 +1,6 @@
 # Time Me
+Your original code is NEVER changed!
+
 Stopwatch that lives as comments in your code. 
 Allows you to see the execution time of your code blocks when you want to. 
 When you don't, TimeMe commands simply live as comments in your code. 
@@ -22,6 +24,7 @@ Command Line:
 Works anywhere in your program. 
 No need for imports, as long as the naming is consistent among files, timers can be accessed anywhere
 
+entry.py:
 ```python 
 import tinme 
 
@@ -32,10 +35,15 @@ time.sleep(5)
 #TimeMe stop --name "test"
 
 #TimeMe print --name "test"
-#TimeMe printall 
 ```
 
+run:
+`timeme --file "C:/full/path/here/entry.py"`
+
+expected output:
+`test: 5`
+
 ## How it works
-Time-Me clones your code into the temporary directory on your device.
+Time-Me copies your code into the temporary directory on your device.
 Next, Time-Me strips out the comments and replaces them with stopwatch code which it imports from itself. 
 Finally, the code is run. Time-Me's stopwatch functioanlity will be imported into the code and then stopped and started accordingly
